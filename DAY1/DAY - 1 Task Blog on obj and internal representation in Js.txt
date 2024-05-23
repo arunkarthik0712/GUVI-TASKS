@@ -1,0 +1,52 @@
+﻿DAY - 1 TASK
+
+
+NAME: Arun Karthik S
+EMAIL: arunkarthik0710@gmail.com
+
+
+2.Write a blog about objects and its internal representation in Javascript
+
+Understanding Objects and Their Internal Representation in JavaScript
+In JavaScript, objects are a fundamental building block for managing and organizing data. An object is a collection of key-value pairs, where the keys are strings (or symbols) and the values can be of any data type, including other objects. This flexibility makes objects highly versatile for various programming tasks.
+
+
+Creating Objects:
+
+You can create an object in JavaScript using the object literal syntax or the `new Object()` constructor. For example:
+code:
+let person = {
+  name: "Alice",
+  age: 30,
+  greet: function() {
+    console.log("Hello, " + this.name);
+  }
+};
+
+
+Accessing and Modifying Properties:
+
+Properties of an object can be accessed and modified using dot notation or bracket notation:
+code:
+console.log(person.name); // Alice
+person.age = 31;
+console.log(person['age']); // 31
+
+
+Internal Representation:
+
+Internally, JavaScript engines use a dynamic, prototype-based system to manage objects. Each object has an internal property called `[[Prototype]]` that points to another object, known as its prototype. This forms a prototype chain, allowing for property inheritance. For instance, methods defined on `Object.prototype` are available to all objects.
+
+Prototypes and Inheritance:
+
+When you access a property on an object, JavaScript first looks at the object itself. If the property isn't found, it traverses the prototype chain. This allows objects to share properties and methods efficiently:
+code:
+let employee = Object.create(person);
+employee.position = "Developer";
+console.log(employee.name); // Alice (inherited from person)
+console.log(employee.position); // Developer
+
+
+Performance Considerations:
+
+JavaScript engines optimize object representation using hidden classes or shapes to speed up property access. These optimizations are crucial for performance, especially in large applications.

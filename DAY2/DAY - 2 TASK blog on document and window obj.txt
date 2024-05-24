@@ -1,0 +1,60 @@
+﻿DAY - 2 TASK
+
+
+NAME: Arun Karthik S
+EMAIL: arunkarthik0710@gmail.com
+
+
+1.Write a blog on Difference between document and window object
+
+
+Differences Between the document and window Objects in JavaScript
+
+In JavaScript, the window and document objects are essential for interacting with the web browser and the content of a webpage. Despite their close relationship, they serve distinct purposes and offer different functionalities.
+
+The window Object
+
+The window object represents the browser's window or an open tab. It is the global object in a browser environment, meaning that all global variables and functions are properties of window. It provides numerous methods, properties, and events to control and interact with the browser, such as:
+
+Alert and Prompt: window.alert("Hello!");, window.prompt("Enter your name:");
+Browser Information: window.navigator, window.location
+Timers: window.setTimeout(), window.setInterval()
+Window Manipulation: window.open(), window.close()
+
+Since window is the global object, you can omit window when accessing its properties and methods:
+
+code:
+alert("Hello!"); // Same as window.alert("Hello!");
+
+
+The document Object:
+
+The document object is a property of the window object and represents the content of the web page (the DOM, or Document Object Model). It allows you to access and manipulate the HTML and CSS of the webpage. Key functionalities include:
+
+Selecting Elements: document.getElementById(), document.querySelector()
+Modifying Content: document.createElement(), document.write(), element.innerHTML
+Event Handling: document.addEventListener()
+
+For example:
+
+code:
+let title = document.getElementById("title");
+title.innerHTML = "Welcome to My Site";
+
+Key Differences
+
+1. Scope and Purpose:
+   window: Represents the entire browser window and provides methods to control it.
+   document: Represents the content of the webpage and provides methods to manipulate it.
+
+2. Global Object:
+   window: Is the global object; global variables and functions are part of window.
+   document: Is a property of window specifically for the DOM.
+
+3. Functionalities:
+   window: Handles browser-level tasks (navigation, information, pop-ups).
+   document: Handles page-level tasks (selecting, modifying, and handling events within the DOM).
+
+Conclusion
+
+Understanding the distinction between window and document is crucial for effective web development. The window object provides a global context and browser-related controls, while the documen object allows for detailed manipulation of the webpage's content. Mastering both objects enables you to create dynamic, responsive, and interactive web applications.

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 3 task</title>
+</head>
+<body>
+    <h1>DAY 3 TASK-2</h1>
+    <h2>Name : Arun Karthik S</h2>
+    <h2>Email : arunkarthik0710@gmail.com </h2>
+    <h4>2. use the rest countries 'API URL -> https://restcountries.com/v3.1/all and display all the country flags in the console </h4>
+
+    <script>
+        var url = "https://restcountries.com/v3.1/all";
+
+            var instance = new XMLHttpRequest();
+
+            instance.open('GET', url);
+
+            instance.onload = function () {
+                if (instance.status >= 200 && instance.status < 300) {
+
+                    var countries = JSON.parse(instance.responseText);
+
+                    var flags = countries.map(country => country.flags.png).filter(flag => flag);
+
+                    flags.forEach(flag => console.log(flag));
+                } else {
+                    console.error('Error fetching the data:', instance.statusText);
+                }
+            };
+
+            instance.onerror = function () {
+                console.error('Request failed');
+            };
+
+            instance.send();
+    </script>
+</body>
+</html>

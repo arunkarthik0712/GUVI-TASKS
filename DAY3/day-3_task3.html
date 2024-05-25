@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 3 task</title>
+</head>
+
+<body>
+    <h1>DAY 3 TASK-3</h1>
+    <h2>Name : Arun Karthik S</h2>
+    <h2>Email : arunkarthik0710@gmail.com </h2>
+    <h4>3. use the same api and print all countries names, region, sub-region and populations </h4>
+
+    <script>
+        var url = "https://restcountries.com/v3.1/all";
+
+        var instance = new XMLHttpRequest();
+
+        instance.open('GET', url);
+
+        instance.onload = function () {
+            if (instance.status >= 200 && instance.status < 300) {
+
+                var countries = JSON.parse(instance.responseText);
+
+                countries.forEach(country => {
+                    var name = country.name.common;
+                    var region = country.region;
+                    var subRegion = country.subregion;
+                    var population = country.population;
+
+                    console.log(`Name: ${name}, Region: ${region}, Sub-Region: ${subRegion}, Population: ${population}`);
+                }); 
+            } else {
+                console.error('Error fetching the data:', instance.statusText);
+            }
+        };
+        instance.onerror = function () {
+            console.error('Request failed');
+        };
+
+        instance.send();
+    </script>
+</body>
+
+</html>

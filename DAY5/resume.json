@@ -1,0 +1,23 @@
+{
+  "name": "Arun Karthik",
+  "contact": {
+    "email": "arunkarthik0710@gmail.com",
+    "LinkedIn": "https://www.linkedin.com/in/arunkarthik0710/"
+  },
+  "education": [
+    {
+      "degree": "Bachelor of Computer Application",
+      "year": 2024
+    }
+  ],
+  "skills": [
+    "JavaScript",
+    "Python",
+    "HTML",
+    "CSS",
+    "PHP",
+    "MySql",
+    "ASP.NET(C#)"
+  ],
+  "Certifications": ["Python", "UI/UX", "Webdevelopment & Hosting"]
+}

@@ -10,13 +10,13 @@ class Movie {
   }
 }
 
-const mov = new Movie("Avengers Endgame", "Marvel Studios", "PG13");
+const mov = new Movie("Avengers Infinty War", "Marvel Studios", "PG13");
 
 const movies = [
-  new Movie("X-Men", "20th Fox Century", "PG"),
+  new Movie("X-Men Wolverine", "20th Fox Century", "PG"),
   new Movie("Deadpool", "20th Fox Century", "R"),
-  new Movie("X-Men 2", "20th Fox Century", "PG"),
-  new Movie("Captian America Civil War", "Marvel Studios", "PG13"),
+  new Movie("X-Men Apocalypse", "20th Fox Century", "PG"),
+  new Movie("Captian America Winter Soldier", "Marvel Studios", "PG13"),
 ];
 
 const pgMovies = Movie.getPG(movies);

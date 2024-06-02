@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day 7 task</title>
+  </head>
+
+  <body>
+    <h1>DAY 7 TASK</h1>
+    <h2>Name : Arun Karthik S</h2>
+    <h2>Email : arunkarthik0710@gmail.com</h2>
+    <h4>
+      b. Get all the countries with a population of less than 2 lakhs using
+      Filter method
+    </h4>
+
+    <script>
+      fetch("https://restcountries.com/v3.1/all")
+        .then((response) => response.json())
+        .then((data) => {
+          const smallPopulationCountries = data.filter(
+            (country) => country.population < 200000
+          );
+          console.log(
+            "Countries with population less than 200,000:",
+            smallPopulationCountries
+          );
+        })
+        .catch((error) => console.error("Error fetching data:", error));
+    </script>
+  </body>
+</html>
